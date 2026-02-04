@@ -1,5 +1,5 @@
 import { StyleSheet, Text, View, Pressable } from "react-native";
-import { FileText, Info, Shield, UserPlus } from "lucide-react-native";
+import { FileText, Info, Shield, UserPlus, Briefcase } from "lucide-react-native";
 import { router } from "expo-router";
 
 import { colors } from "@/theme/colors";
@@ -8,18 +8,25 @@ import { Screen } from "@/ui/Screen";
 
 const menuItems = [
   {
+    icon: Briefcase,
+    title: "일자리 확인",
+    description: "추천 일자리 목록을 확인하고 선택합니다",
+    path: "/guide",
+    color: colors.primary,
+  },
+  {
     icon: UserPlus,
     title: "새 위험도 확인",
     description: "신청자 정보를 입력하여 고용 위험도를 판단합니다",
     path: "/applicant-form",
-    color: colors.primary,
+    color: colors.secondary,
   },
   {
     icon: FileText,
     title: "최근 판단 기록",
     description: "이전에 확인한 위험도 판단 기록을 조회합니다",
     path: "/records",
-    color: colors.secondary,
+    color: colors.info,
   },
   {
     icon: Info,
@@ -54,7 +61,7 @@ export default function HomeScreen() {
           >
             <Card style={styles.menuCard}>
               <View style={[styles.menuIcon, { backgroundColor: item.color }]}>
-                <item.icon color="#FFFFFF" size={28} />
+                <item.icon color="#FFFFFF" size={24} />
               </View>
               <Text style={styles.menuTitle}>{item.title}</Text>
               <Text style={styles.menuDescription}>{item.description}</Text>

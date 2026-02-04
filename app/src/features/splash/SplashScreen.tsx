@@ -9,8 +9,8 @@ import { Screen } from "@/ui/Screen";
 export default function SplashScreen() {
   useEffect(() => {
     const timer = setTimeout(() => {
-      router.replace("/home");
-    }, 2000);
+      router.replace("/login");
+    }, 1500);
 
     return () => clearTimeout(timer);
   }, []);

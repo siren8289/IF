@@ -68,7 +68,7 @@ export default function RecordListScreen() {
               <Pressable
                 key={record.id}
                 onPress={() => router.push(`/records/${record.id}`)}
-                style={({ pressed }) => [pressed && styles.pressed]}
+                style={({ pressed }: { pressed: boolean }) => [pressed && styles.pressed]}
               >
                 <Card style={styles.listItem}>
                   <View style={styles.listHeader}>

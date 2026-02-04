@@ -1,4 +1,4 @@
-import type { ViewStyle, TextStyle } from "react-native";
+import type { TextStyle, ViewStyle } from "react-native";
 import { StyleSheet, Text, View } from "react-native";
 
 type BadgeProps = {
@@ -19,8 +19,8 @@ export function Badge({ label, backgroundColor, textColor, style, textStyle }: B
 
 const styles = StyleSheet.create({
   badge: {
-    paddingHorizontal: 12,
-    paddingVertical: 6,
+    paddingHorizontal: 10,
+    paddingVertical: 4,
     borderRadius: 999,
     alignSelf: "flex-start",
   },

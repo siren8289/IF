@@ -6,7 +6,7 @@ import { SafeAreaView } from "react-native-safe-area-context";
 import { colors } from "@/theme/colors";
 
 type ScreenProps = {
-  children: ReactNode;
+  children?: ReactNode;
   scroll?: boolean;
   contentStyle?: ViewStyle;
   backgroundColor?: string;

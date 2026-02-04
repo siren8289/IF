@@ -7,6 +7,10 @@
       "@/*": [
         "src/*"
       ]
-    }
+    },
+    "types": [
+      "react",
+      "react-native"
+    ]
   }
 }
